@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="users"
+            type="com.example.appexamen.Usuarios" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".Interfaz3">
+        <TextView
+            android:id="@+id/txtbienvenido"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@color/azul"
+            android:padding="16dp"
+            android:text="@{users.usuario}"
+            android:textColor="@color/white"
+            android:textSize="26sp" />
+
+        <ImageView
+            android:id="@+id/imguser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtbienvenido"
+            android:src="@drawable/asd"/>
+
+        <TextView
+            android:id="@+id/lb_acceso"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ACCESO SATISFACTORIO   "
+            android:textSize="25sp"
+            android:textColor="@color/azul"
+            android:gravity="center"
+            android:layout_below="@+id/imguser"
+            />
+
+        <RatingBar
+            android:id="@+id/rtb_valoracion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lb_acceso"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="92dp"
+            android:progressTint="#FFEB3B" />
+
+        <TextView
+            android:id="@+id/txt_valcontraseña"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:textSize="34sp"
+            android:layout_below="@id/rtb_valoracion"
+            android:layout_marginHorizontal="100dp"/>
+
+        <TextView
+            android:id="@+id/txtcorreo"
+            android:text="@{users.correo}"
+            android:layout_width="408dp"
+            android:layout_height="41dp"
+            android:layout_marginTop="24dp"
+            android:background="@color/rojo"
+            android:fontFamily="sans-serif-medium"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:inputType="textEmailAddress"
+            android:layout_below="@id/txt_valcontraseña" />
+
+    </RelativeLayout>
+</layout>
+
+
+
